@@ -1,0 +1,57 @@
+@keyframes shine {
+    30% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.button {
+    color: #000;
+    background: #ffcc00;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    position: relative;
+    transition: .3s all;
+    overflow: hidden;
+    &_animated {
+        &::before {
+            content: "";
+            display: block;
+            background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .4));
+            width: 45px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: -60px;
+            transform: skewX(-45deg);
+            animation-name: shine;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .button {
+        &:hover {
+            background: #f0c000;
+        }
+    }
+}
+@media (hover: none) {
+    .button {
+        &:active {
+            background: #f0c000;
+        }
+    }
+}

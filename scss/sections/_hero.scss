@@ -1,0 +1,167 @@
+.hero {
+    padding: 130px 0 60px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/hero-bg.jpg) center/cover no-repeat;
+    overflow: hidden;
+    &__wrapper {
+        position: relative;
+    }
+    &__spinner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        &-wrap {
+            width: 132px;
+            height: 132px;
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            animation: sale-anim 25s infinite linear;
+        }
+        &-circle {
+            height: 46px;
+            width: 46px;
+            border-radius: 100%;
+            background: #ffcc00;
+            display: flex;
+            flex-shrink: 0;
+        }
+    }
+    &__title {
+        color: #ffffff;
+        font-size: 42px;
+        line-height: 50px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        margin-bottom: 50px;
+    }
+    &__subtitle {
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 31px;
+        margin-bottom: 20px;
+    }
+    &__button {
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+        margin-bottom: 80px;
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    &__card {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        &-img {
+            display: flex;
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+        }
+        &-text {
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+}
+@media (max-width: 1200px) {
+    .hero {
+        padding: 110px 0 105px 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/hero-bg-2.jpg) center/cover no-repeat;
+        &__title {
+            font-size: 32px;
+            line-height: 38px;
+            margin-bottom: 10px;
+        }
+        &__subtitle {
+            margin-bottom: 40px;
+        }
+        &__button {
+            margin-bottom: 50px;
+        }
+        &__grid {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 620px;
+            width: 100%;
+        }
+        &__spinner {
+            top: -65px;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .hero {
+        &__spinner {
+            display: none;
+        }
+        &__title {
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+    }
+}
+@media (max-width: 640px) {
+    .hero {
+        padding: 40px 0 50px 0;
+        &__wrapper {
+            max-width: 450px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        &__title {
+            font-size: 28px;
+            line-height: 35px;
+            text-align: center;
+            margin-bottom: 40px;
+            br {
+                display: none;
+            }
+        }
+        &__subtitle {
+            text-align: center;
+            br {
+                display: none;
+            }
+        }
+        &__button {
+            width: 100%;
+        }
+        &__grid {
+            row-gap: 20px;
+            column-gap: 10px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        &__wrapper {
+            max-width: 305px;
+        }
+        &__title {
+            font-size: 24px;
+            line-height: 30px;
+            letter-spacing: 0px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        &__grid {
+            grid-template-columns: 1fr;
+            column-gap: 0;
+        }
+    }
+}

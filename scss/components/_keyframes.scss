@@ -1,0 +1,44 @@
+@keyframes openSearchModal {
+    0%   {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes openMoveMobileMenu {
+    0%   {
+        transform: translateX(400px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes closeSearchModal {
+    0%   {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        display: none;
+    }
+}
+@keyframes closeMoveMobileMenu {
+    0%   {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(400px);
+    }
+}
+@keyframes sale-anim {
+    0% {
+        transform: rotate(0deg);
+        animation-timing-function: linear;
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
