@@ -54,7 +54,7 @@ const header = () => {
         }
     })
     const scrollLinks = document.querySelectorAll('[scroll]');
-scrollLinks.forEach(link => {
+    scrollLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const blockId = link.getAttribute('href');
@@ -68,101 +68,6 @@ scrollLinks.forEach(link => {
 }
 header();
 
-const modalLinks = document.querySelectorAll('[toggle]');
-modalLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const blockId = link.getAttribute('toggle');
-        document.querySelector(blockId).classList.toggle('active');
-        if (document.querySelector(blockId).classList.contains('active')) {
-            blockBody();
-        } else {
-            unBlockBody();
-        }
-    })
-})
-
-
-const formErrorsIndvidual = document.querySelectorAll('[data-err]')
-const forms = document.querySelectorAll('form');
-const formInputs = document.querySelectorAll('input[name="phone"]');
-formInputs.forEach((input, index) => {
-    input.addEventListener('focus', () => {
-        if (formErrorsIndvidual[index].classList.contains('active')) {
-            formErrorsIndvidual[index].classList.remove('active')
-        }
-    })
-})
-forms.forEach((form, index) => {
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const input = form.querySelector('input[name="phone"]');
-        if (input.value !== "") {
-            console.log('Отправлено')
-            form.reset();
-            yaCounter96630363.reachGoal('order');
-            document.querySelectorAll('.overlay').forEach(modal => {
-                if (modal.classList.contains('active')) {
-                    modal.classList.remove('active')
-                }
-            })
-            document.querySelector('#thanks').classList.add('active');
-        } else {
-            formErrorsIndvidual[index].classList.add('active')
-        }
-    })
-})
-
-const quiz = document.querySelector('[data-block="quiz"]');
-if (quiz) {
-    let step = 0;
-    const steps = document.querySelectorAll('[data-step]');
-    const nextButton = document.querySelector('.button.modal__form-next');
-    const prevButton = document.querySelector('.button.modal__form-back');
-    const modalCounter = document.querySelector('.modal__form-counter > .count');
-    const submitButton = document.querySelector('.modal__form-button_quiz');
-    const svgBar = document.querySelector('.t-form__screen-progress-bar');
-    const progressStepSvg = {
-        0: 50.266,
-        1: 37.7,
-        2: 25.134,
-        3: 12.568,
-        4: 0.002
-    }
-    const buttonClick = (num, operation = '+') => {
-        if (step !== num) {
-            operation === '+' ? step++ : step--;
-            steps.forEach(block => {
-                block.classList.add('modal__form-wrap_hidden');
-            })
-            if (steps[step].classList.contains('modal__form-wrap_hidden')) {
-                steps[step].classList.remove('modal__form-wrap_hidden')
-            }
-            modalCounter.textContent = `${step + 1}/5`
-            svgBar.style.strokeDashoffset = progressStepSvg[step];
-        }
-        if (step === 4) {
-            nextButton.style.display = 'none';
-            submitButton.style.display = 'flex';
-        } else {
-            nextButton.style.display = 'flex';
-            submitButton.style.display = 'none';
-        }
-        if (step !== 0) {
-            prevButton.style.opacity = 1;
-        } else {
-            prevButton.style.opacity = 0;
-        }
-    }
-    nextButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        buttonClick(4);
-    })
-    prevButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        buttonClick(0, '-');
-    })
-}
 
 const phoneInputs = document.querySelectorAll('[data-input="masked"]');
 const im = new Inputmask({
@@ -175,7 +80,6 @@ const im = new Inputmask({
 phoneInputs.forEach(input => {
     im.mask(input);
 })
-
 
 
 const servicesSlider = new Swiper('.services__swiper', {

@@ -40,7 +40,45 @@
         }
     }
 }
-
+.button-top {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    display: none;
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.20);
+    border-radius: 100%;
+    z-index: 11;
+    svg {
+        rect {
+            transition: .3s all;
+        }
+    }
+    &:hover {
+        svg {
+            rect {
+                fill: #ffcc00;
+            }
+        }
+    }
+}
+.button-smeta {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 10px 10px 50px 0px rgba(0,0,0,0.3);
+    border: 1px solid #000;
+    width: 263px;
+    height: 55px;
+    z-index: 11;
+}
+@media (max-width: 640px) {
+    .button-top {
+        display: none !important;
+    }
+}
 @media (hover: hover) {
     .button {
         &:hover {

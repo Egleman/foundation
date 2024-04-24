@@ -2,11 +2,26 @@
     display: none;
 }
 .faq {
-    padding: 60px;
+    padding: 60px 0;
+    position: relative;
     &__title {
         margin-bottom: 60px;
     }
     &__accordion {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        &-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border-radius: 100%;
+            background: #fff;
+            transition: .3s all;
+        }
         &-header {
             padding: 25px 30px;
             display: flex;
@@ -14,23 +29,67 @@
             align-items: center;
             gap: 5px;
             box-sizing: border-box;
+            cursor: pointer;
+            &:hover {
+                .faq__accordion-icon {
+                    background: #ffcc00;
+                }
+            }
         }
-        &-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100%;
-            background: #fff;
-        }
+        
         &-title {
             font-size: 24px;
             line-height: 1.35;
             font-weight: 600;
         }
         &-content {
-            
+            font-size: 20px;
+            padding: 0 30px;
+            box-sizing: border-box;
+        }
+    }
+    .accordion__item_show, .accordion__item_slidedown {
+        .faq__accordion-icon {
+            transform: rotate(-45deg);
+        }
+    }
+    &__bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        &-text {
+            font-size: 18px;
+            line-height: 1.55;
+        }
+    }
+    &__button {
+        width: 263px;
+        height: 60px;
+    }
+}
+@media (max-width: 1200px) {
+    .faq {
+        &__accordion {
+            &-title {
+                font-size: 22px;
+            }
+        }
+    }
+}
+@media (max-width: 640px) {
+    .faq {
+        &__accordion {
+            &-header {
+                padding: 25px 0;
+            }
+            &-title {
+                font-size: 20px;
+            }
+            &-content {
+                padding: 0;
+            }
         }
     }
 }

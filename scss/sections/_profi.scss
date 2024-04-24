@@ -1,0 +1,77 @@
+.profi {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/profi-bg.jpg) center/cover no-repeat;
+    &__title {
+        font-size: 48px;
+        line-height: 1.23;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 24px;
+        span {
+            color: #ffcc00;
+        }
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__subtitle {
+        font-size: 24px;
+        line-height: 1.5;
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        max-width: 600px;
+        width: 100%;
+        margin: 0 auto 75px;
+        span {
+            color: #ffcc00;
+        }
+    }
+    &__button {
+        width: 230px;
+        height: 56px;
+    }
+}
+@media (max-width: 1200px) {
+    .profi {
+        &__title {
+            font-size: 44px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+    }
+}
+@media (max-width: 960px) {
+    .profi {
+        &__title {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto 25px;
+        }
+    }
+}
+@media (max-width: 640px) {
+    .profi {
+        padding: 70px 0;
+        &__title {
+            font-size: 30px;
+        }
+        &__subtitle {
+            font-size: 20px;
+            line-height: 1.4;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .profi {
+        &__title {
+            br {
+                display: none;
+            }
+        }
+    }
+}
