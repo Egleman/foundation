@@ -1889,6 +1889,8 @@ b {
 .modal input[type=range].styled-slider {
   height: 1px;
   -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
   padding: 0;
   margin-top: 50px;
   margin-bottom: 20px;
