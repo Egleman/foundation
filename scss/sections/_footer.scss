@@ -7,13 +7,13 @@
     }
     &__logo {
         display: flex;
-        max-width: 220px;
+        max-width: 50px;
         width: 100%;
-        height: 51px;
+        height: max-content;
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             display: flex;
         }
     }

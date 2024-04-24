@@ -336,14 +336,14 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 225px;
+  max-width: 39px;
   width: 100%;
 }
 .header__logo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .header__list {
   display: -webkit-box;
@@ -1397,15 +1397,17 @@ b {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 220px;
+  max-width: 50px;
   width: 100%;
-  height: 51px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 .footer__logo img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

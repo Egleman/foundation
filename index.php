@@ -19,7 +19,7 @@ $redirectTo .= '?' . $queryParams; // Добавляем параметры GET 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/logo-new.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Фундамент любой сложности под ключ в Москве и Московской области</title>
@@ -50,10 +50,10 @@ $redirectTo .= '?' . $queryParams; // Добавляем параметры GET 
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
-                <a href="/" class="header__logo">
+            <a href="/" class="header__logo">
                     <picture id="test">
-                        <source media="(max-width: 1200px)" srcset="./img/logo-mobile.svg">
-                        <img src="./img/logo.jpg">
+                        <source media="(max-width: 1200px)" srcset="./img/logo-new.png">
+                        <img src="./img/logo-new.png">
                     </picture>
                 </a>
                 <nav class="header__nav">
